@@ -156,6 +156,9 @@ do_install () {
 		ln -sf ${TARGET_PREFIX}gfortran gfortran || true
 		ln -sf gfortran f95 || true
 	fi
+	if [ -e ${TARGET_PREFIX}gcov ]; then
+		ln -sf ${TARGET_PREFIX}gcov gcov || true
+	fi
 	ln -sf ${TARGET_PREFIX}g++ g++
 	ln -sf ${TARGET_PREFIX}gcc gcc
 	ln -sf ${TARGET_PREFIX}cpp cpp
